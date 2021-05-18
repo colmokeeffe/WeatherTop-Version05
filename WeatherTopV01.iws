@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b92ecfd-e309-41d7-bbb1-575de0c234ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/WeatherTopV01.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTopV01.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherTopV01.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTopV01.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,23 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -68,7 +83,7 @@
       <workItem from="1620512278198" duration="11354000" />
       <workItem from="1620840155824" duration="935000" />
       <workItem from="1621332544865" duration="1504000" />
-      <workItem from="1621335345609" duration="298000" />
+      <workItem from="1621335345609" duration="1985000" />
     </task>
     <servers />
   </component>
