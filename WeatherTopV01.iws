@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b92ecfd-e309-41d7-bbb1-575de0c234ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherTopV01.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTopV01.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeatherTopV01.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTopV01.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/application.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +67,8 @@
       <workItem from="1620416397553" duration="21878000" />
       <workItem from="1620512278198" duration="11354000" />
       <workItem from="1620840155824" duration="935000" />
-      <workItem from="1621332544865" duration="359000" />
+      <workItem from="1621332544865" duration="1504000" />
+      <workItem from="1621335345609" duration="298000" />
     </task>
     <servers />
   </component>
@@ -84,5 +85,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
