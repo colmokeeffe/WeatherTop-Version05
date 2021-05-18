@@ -1,0 +1,63 @@
+#{if _station.readings.size() > 0}
+<div class="ui five cards">
+  <div class="card">
+    <div class="content"><i class="right floated large map pin icon"></i>
+    <div class="header">#{list items:_station, as:'station'}
+      ${station.name}  </div>
+      <div class="description">
+        <p>Latitude: ${station.lat}</p>
+        <p>Longitude: ${station.lng}</p>
+      </div>#{/list}
+    </div>
+
+  </div>
+  #{list items:_station.readings.last(), as:'reading'}
+  <div class="card">
+   <div class="content"><i class="right floated large ${_station.codeToIcon(reading.code)}"></i>
+    <div class="header">Weather</div>
+      <div class="description">
+        <p>${_station.codeToString(reading.code)}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="content"><i class="right floated large temperature low icon"></i>
+      <div class="header">Temperature</div>
+      <div class="description">
+        <p>${reading.temperature} C</p>
+        <p>${_station.celsiusToFahrenheit(reading.temperature)} F</p>
+        <p>Max: ${station.maxTempVal}</p>
+        <p>Min: ${station.minTempVal}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="content"><i class="right floated large wind icon"></i>
+      <div class="header">Wind</div>
+      <div class="description">
+        <p>${_station.speedToBeaufort(reading.windSpeed)} bft</p>
+        <p>${_station.windToString(reading.windDirection)}</p>
+        <p>Feels like</p>
+        <p>${_station.feelsLike(reading.temperature,reading.windSpeed)}</p>
+        <p>Max: ${station.maxWindSpeedVal}</p>
+        <p>Min: ${station.minWindSpeedVal}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="content"><i class="right floated large temperature high icon"></i>
+      <div class="header">Pressure</div>
+      <div class="description">
+        <p>${reading.pressure} hPa</p>
+        <p>Max: ${station.maxPressureVal}</p>
+        <p>Min: ${station.minPressureVal}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+#{/list}
+#{/if}
