@@ -15,6 +15,17 @@ public class Accounts extends Controller
         member.save();
         redirect("/");
     }
+    public static void editProfile(Member member)
+    {
+        Logger.info("Editing user profile " + member);
+        Member currentMember = getLoggedInMember();
+        currentMember.firstname=member.firstname;
+        currentMember.lastname=member.lastname;
+        currentMember.email=member.email;
+        currentMember.password=member.password;
+        currentMember.save();
+        redirect("/dashboard");
+    }
 
     public static void authenticate(String email, String password)
     {
@@ -45,6 +56,13 @@ public class Accounts extends Controller
         session.clear();
         redirect ("/");
     }
+
+    public static void edit()
+    {
+        Member member = getLoggedInMember();
+        render("editprofile.html", member);
+    }
+
 
     public static Member getLoggedInMember()
     {

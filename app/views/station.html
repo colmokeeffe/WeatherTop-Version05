@@ -1,18 +1,10 @@
 
 #{extends 'main.html' /}
 #{set title:'Station' /}
+#{menu id:"station"/}
 
-#{menu id:"dashboard"/}
-
-<section class="ui segment">
-    <h2 class="ui header">
-        ${station.name}
-
-    </h2>
-
-
+<section class="ui grey segment">
     #{mainpanel station:station /}
     #{listreadings station:station /}
     #{addReading station:station /}
-
 </section>

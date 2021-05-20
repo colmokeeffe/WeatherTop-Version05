@@ -1,8 +1,5 @@
 package controllers;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 import models.Member;
 import models.Station;
@@ -22,11 +19,11 @@ public class Dashboard extends Controller
     render("dashboard.html", member, stations);
   }
 
-  public static void addStation (String name, float lat, float lng)
+  public static void addStation (String name, float lat, float lng, Date date)
   {
     Logger.info ("Adding a new station called " + name);
     Member member = Accounts.getLoggedInMember();
-    Station station= new Station (name,lat,lng);
+    Station station= new Station (name,lat,lng,date);
     member.stations.add(station);
     member.save();
     redirect ("/dashboard");

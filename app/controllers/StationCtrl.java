@@ -6,13 +6,16 @@ import play.Logger;
 import play.mvc.Controller;
 import utils.StationAnalytics;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 public class StationCtrl extends Controller
 {
     public static void index(Long id)
     {
         Station station = Station.findById(id);
-        Logger.info ("Station id = " + id);
+        Logger.info ("dashboard id = " + id);
         if(station.readings.size()!= 0) {
             station.maxTempVal = StationAnalytics.getMaxTemp(station.readings).temperature;
             station.minTempVal = StationAnalytics.getMinTemp(station.readings).temperature;
@@ -20,7 +23,7 @@ public class StationCtrl extends Controller
             station.minWindSpeedVal = StationAnalytics.getMinWindSpeed(station.readings).windSpeed;
             station.maxPressureVal = StationAnalytics.getMaxPressure(station.readings).pressure;
             station.minPressureVal = StationAnalytics.getMinPressure(station.readings).pressure;
-            render("station.html", station);
+            render("station.html",station);
         }
         else station.maxTempVal =0;
         station.minTempVal =0;
@@ -31,9 +34,9 @@ public class StationCtrl extends Controller
         render("station.html", station);
     }
 
-    public static void addReading(Long id, int code, float temperature, float windSpeed, int windDirection, int pressure)
-    {
-        Reading reading = new Reading(code,temperature,windSpeed,windDirection,pressure);
+    public static void addReading(Long id, int code, double temperature, double windSpeed, int windDirection, int pressure, Date date)
+    {   date = new Date();
+        Reading reading = new Reading(code,temperature,windSpeed,windDirection,pressure, date);
         Station station = Station.findById(id);
         station.readings.add(reading);
         station.save();

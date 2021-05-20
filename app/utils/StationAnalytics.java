@@ -11,7 +11,7 @@ public class StationAnalytics {
 
     public static Reading getMinTemp(List<Reading> readings) {
         Reading minTemp = null;
-        try {if (readings.size() > 0) {
+           if (readings.size() > 0) {
             minTemp = readings.get(0);
             for (Reading reading : readings) {
                 if (reading.temperature < minTemp.temperature) {
@@ -20,29 +20,19 @@ public class StationAnalytics {
             }
         }
         return minTemp;
-    }catch (Exception e) {
-            System.out.println("null");
-        }
-        return minTemp;
     }
 
     public static Reading getMaxTemp(List<Reading> readings) {
         Reading maxTemp = null;
-
-        try {
-            if (readings.size() > 0) {
-                maxTemp = readings.get(readings.size() - 1);
-                for (Reading reading : readings) {
-                    if (reading.temperature > maxTemp.temperature) {
-                        maxTemp = reading;
-                    }
+        if (readings.size() > 0) {
+            maxTemp = readings.get(0);
+            for (Reading reading : readings) {
+                if (reading.temperature > maxTemp.temperature) {
+                    maxTemp = reading;
                 }
             }
-            return maxTemp;
-        } catch (Exception e) {
-            System.out.println("null");
         }
-    return (Reading) readings;
+        return maxTemp;
     }
 
     public static Reading getMinWindSpeed(List<Reading> readings) {
@@ -61,7 +51,7 @@ public class StationAnalytics {
     public static Reading getMaxWindSpeed(List<Reading> readings) {
         Reading maxWind = null;
         if (readings.size() > 0) {
-            maxWind = readings.get(readings.size() - 1);
+            maxWind = readings.get(0);
             for (Reading reading : readings) {
                 if (reading.windSpeed > maxWind.windSpeed) {
                     maxWind = reading;
@@ -87,7 +77,7 @@ public class StationAnalytics {
     public static Reading getMaxPressure(List<Reading> readings) {
         Reading maxPressure = null;
         if (readings.size() > 0) {
-            maxPressure = readings.get(readings.size() - 1);
+            maxPressure = readings.get(0);
             for (Reading reading : readings) {
                 if (reading.pressure > maxPressure.pressure) {
                     maxPressure = reading;
@@ -96,7 +86,5 @@ public class StationAnalytics {
         }
         return maxPressure;
     }
-
-
 
 }

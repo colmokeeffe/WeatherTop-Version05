@@ -1,5 +1,5 @@
 #{if _station.readings.size() > 0}
-<div class="ui five cards">
+<div class="ui five black cards">
   <div class="card">
     <div class="content"><i class="right floated large map pin icon"></i>
     <div class="header">#{list items:_station, as:'station'}
@@ -27,8 +27,9 @@
       <div class="description">
         <p>${reading.temperature} C</p>
         <p>${_station.celsiusToFahrenheit(reading.temperature)} F</p>
-        <p>Max: ${station.maxTempVal}</p>
-        <p>Min: ${station.minTempVal}</p>
+        <p>Max: ${station.maxTempVal} C</p>
+        <p>Min: ${station.minTempVal} C</p>
+
       </div>
     </div>
   </div>
@@ -38,11 +39,10 @@
       <div class="header">Wind</div>
       <div class="description">
         <p>${_station.speedToBeaufort(reading.windSpeed)} bft</p>
-        <p>${_station.windToString(reading.windDirection)}</p>
-        <p>Feels like</p>
-        <p>${_station.feelsLike(reading.temperature,reading.windSpeed)}</p>
-        <p>Max: ${station.maxWindSpeedVal}</p>
-        <p>Min: ${station.minWindSpeedVal}</p>
+        <p>Wind Direction: ${_station.windToString(reading.windDirection)}</p>
+        <p>Feels like: ${_station.feelsLike(reading.temperature,reading.windSpeed)} C</p>
+        <p>Max Wind Speed: ${station.maxWindSpeedVal} Km/h</p>
+        <p>Min Wind Speed: ${station.minWindSpeedVal} Km/h</p>
       </div>
     </div>
   </div>
@@ -52,8 +52,8 @@
       <div class="header">Pressure</div>
       <div class="description">
         <p>${reading.pressure} hPa</p>
-        <p>Max: ${station.maxPressureVal}</p>
-        <p>Min: ${station.minPressureVal}</p>
+        <p>Max: ${station.maxPressureVal} hPa</p>
+        <p>Min: ${station.minPressureVal} hPa</p>
       </div>
     </div>
   </div>

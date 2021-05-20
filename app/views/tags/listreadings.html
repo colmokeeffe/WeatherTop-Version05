@@ -1,16 +1,20 @@
-<table class="ui fixed table">
+<table class="ui inverted fixed table">
   <thead>
   <tr>
-    <th>Code</th>
-    <th>Temperature</th>
-    <th>Wind Speed</th>
+    <th>Date/Time</th>
+    <th>Weather Code</th>
+    <th>Temperature (C)</th>
+    <th>Wind Speed (Km/h)</th>
     <th>Wind Direction</th>
-    <th>Pressure</th>
+    <th>Pressure (hPa)</th>
   </tr>
   </thead>
   <tbody>
   #{list items:_station.readings, as:'reading'}
   <tr>
+    <td>
+      ${reading.date.format('dd MMMM yyyy hh:mm:ss aa')}
+    </td>
   <td>
     ${reading.code}
   </td>
@@ -24,7 +28,7 @@
     ${reading.windDirection}
   </td>
   <td>
-    ${reading.pressure}  <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="ui right floated mini red button">   delete reading</a>
+    ${reading.pressure}  <a href="/stations/${_station.id}/deleteReading/${reading.id}" class="ui right floated mini red button">   Delete Readings</a>
   </td>
   </tr>
     #{/list}

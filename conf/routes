@@ -8,7 +8,9 @@ GET     /                                       Start.index
 GET    /signup                                  Accounts.signup
 GET    /login                                   Accounts.login
 POST   /register                                Accounts.register
+POST   /editProfile                                Accounts.editProfile
 POST   /authenticate                            Accounts.authenticate
+GET    /edit                                  Accounts.edit
 GET    /logout                                  Accounts.logout
 
 GET     /dashboard                              Dashboard.index

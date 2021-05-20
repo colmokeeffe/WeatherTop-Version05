@@ -11,12 +11,14 @@ import javax.persistence.OneToMany;
 import java.text.Collator;
 import java.text.DecimalFormat;
 import java.util.*;
+import java.util.Date;
 
 @Entity
 public class Station extends Model {
   public String name;
   public float lat;
   public float lng;
+  public Date date;
   public int code;
   public double temperature;
   public double windSpeed;
@@ -35,11 +37,12 @@ public class Station extends Model {
   public int minPressureVal;
 
 
-  public Station(String name, float lat, float lng) {
+  public Station(String name, float lat, float lng, Date date)
+  {
     this.name = name;
     this.lat = lat;
     this.lng = lng;
-
+    this.date=date;
   }
 
   public String getName(){
@@ -73,7 +76,7 @@ public class Station extends Model {
       case 800:
         return "Thunder";
       default:
-        return "Unable to Determine Weather";
+        return "Unable to Determine Current Weather";
     }
   }
 
@@ -96,7 +99,7 @@ public class Station extends Model {
       case 800:
         return "bolt icon";
       default:
-        return "Unable to Determine Weather";
+        return "red question circle icon";
     }
   }
 
@@ -173,8 +176,6 @@ public class Station extends Model {
     DecimalFormat df = new DecimalFormat("#.##");
     return df.format(windChill);
   }
-
-
 }
 
 
