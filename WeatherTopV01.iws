@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b92ecfd-e309-41d7-bbb1-575de0c234ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/WeatherTopV01.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeatherTopV01.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Dashboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
       <workItem from="1621332544865" duration="1504000" />
       <workItem from="1621335345609" duration="1985000" />
       <workItem from="1621338699767" duration="74727000" />
-      <workItem from="1621553961132" duration="36016000" />
+      <workItem from="1621553961132" duration="36842000" />
     </task>
     <servers />
   </component>
