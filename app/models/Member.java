@@ -22,6 +22,7 @@ public class Member extends Model
     public List<Station> stations = new ArrayList<Station>();
 
 
+
     public Member(String firstname, String lastname, String email, String password)
     {
         this.firstname = firstname;

@@ -15,7 +15,7 @@ public class StationCtrl extends Controller
     public static void index(Long id)
     {
         Station station = Station.findById(id);
-        Logger.info ("dashboard id = " + id);
+        Logger.info ("station id = " + id);
         if(station.readings.size()!= 0) {
             station.maxTempVal = StationAnalytics.getMaxTemp(station.readings).temperature;
             station.minTempVal = StationAnalytics.getMinTemp(station.readings).temperature;

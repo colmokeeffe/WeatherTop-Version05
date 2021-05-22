@@ -12,14 +12,13 @@ POST   /editProfile                                Accounts.editProfile
 POST   /authenticate                            Accounts.authenticate
 GET    /edit                                  Accounts.edit
 GET    /logout                                  Accounts.logout
-
 GET     /dashboard                              Dashboard.index
 GET     /dashboard/deleteStation/{id}          Dashboard.deleteStation
-
 POST    /dashboard/addstation                Dashboard.addStation
 
 GET     /about                                  About.index
 GET     /admin                                  Admin.index
+
 GET     /stations/{id}                         StationCtrl.index
 GET     /stations/{id}/deleteReading/{readingid}     StationCtrl.deleteReading
 

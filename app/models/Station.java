@@ -176,6 +176,7 @@ public class Station extends Model {
     DecimalFormat df = new DecimalFormat("#.##");
     return df.format(windChill);
   }
+
 }
 
 
