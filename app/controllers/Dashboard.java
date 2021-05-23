@@ -32,7 +32,7 @@ public class Dashboard extends Controller
       station.minPressureVal = StationAnalytics.getMinPressure(station.readings).pressure;
 
     }}
-    render("dashboard.html",stations);
+    render("dashboard.html",member,stations);
   }
 
   public static void addStation (String name, float lat, float lng, Date date)
