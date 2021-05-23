@@ -1,4 +1,4 @@
-#{if _station.readings.size() > 0}
+#{if _station.readings.size()!= 0}
 <div class="ui five black cards">
   <div class="card">
     <div class="content"><i class="right floated large map pin icon"></i>
@@ -11,7 +11,7 @@
     </div>
 
   </div>
-  #{list items:_station.readings.last(), as:'reading'}
+  #{list items:station.readings.last(), as:'reading'}
 
   <div class="card">
    <div class="content"><i class="right floated large ${_station.codeToIcon(reading.code)}"></i>
